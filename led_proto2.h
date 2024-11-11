@@ -6,15 +6,16 @@ class clsLedProto {
   public: // Add this line to change the access level to public for the following members
   enum ClassStatLeds {
     // Enumerations representing the indices in the pulse train for various status LEDs on the HVAC unit
+    enum ClassStatLeds {
     COOL = 0,
-    AUTO = 1,  //RUN_BLINK
-    UNK1 = 2,
+    AUTO = 1,
+    ROOM5 = 2,
     RUN = 3,
-    ROOM = 4,
-    UNK2 = 5,
-    UNK3 = 6,
-    UNK4 = 7,
-    FAN_CONT = 8,  // COOL_AUTO
+    ROOM8 = 4,
+    ROOM7 = 5,
+    ROOM6 = 6,
+    TIMER = 7,
+    FAN_CONT = 8,
     FAN_HI = 9,
     FAN_MID = 10,
     FAN_LOW = 11,
@@ -39,15 +40,14 @@ class clsLedProto {
     _2D = 30,
     _2A = 31,
     _1D = 32,
-    UNK5 = 33,
+    INSIDE = 33,
     _1C = 34,
     _1B = 35,
     _1E = 36,
     _1G = 37,
     _1F = 38,
     _1A = 39,  
-    UNK6 = 40
-    };
+  };
 
   unsigned long last_intr_us;  // Timestamp of the last interrupt in microseconds
   unsigned long last_work;     // Timestamp of the last work in the main loop in microseconds
